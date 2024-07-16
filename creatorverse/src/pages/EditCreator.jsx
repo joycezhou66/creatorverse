@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../client';
 
 const EditCreator = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [description, setDescription] = useState('');
   const [imageURL, setImageURL] = useState('');
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCreator = async () => {
@@ -25,6 +26,7 @@ const EditCreator = () => {
         setUrl(data.url);
         setDescription(data.description);
         setImageURL(data.imageURL);
+        setLoading(false);
       }
     };
 
@@ -42,7 +44,7 @@ const EditCreator = () => {
     if (error) {
       console.error("Error updating creator: ", error);
     } else {
-      navigate(`/creator/${id}`);
+      navigate('/');
     }
   };
 
@@ -58,6 +60,10 @@ const EditCreator = () => {
       navigate('/');
     }
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div className="edit-creator">
@@ -98,11 +104,14 @@ const EditCreator = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">Update Creator</button>
+        <button type="button" className="btn btn-danger" onClick={handleDelete}>Delete Creator</button>
       </form>
-      <button onClick={handleDelete} className="btn btn-danger">Delete Creator</button>
     </div>
   );
 };
 
 export default EditCreator;
+
+
+
 

@@ -1,4 +1,3 @@
-/* src/index.css */
 body {
   padding: 20px;
   font-family: 'Roboto', sans-serif;
@@ -20,6 +19,14 @@ h1 {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
 }
 
 .creators-container {
@@ -177,5 +184,29 @@ h1 {
 .edit-creator button.btn-danger:hover {
   background-color: #c82333;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+
+  .add-creator,
+  .edit-creator {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+
+  .add-creator,
+  .edit-creator {
+    width: calc(100% - 40px);
+  }
+}
+
 
 
