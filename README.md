@@ -48,7 +48,7 @@ GIF created with ...  👉🏿 LiceCap
 
 ## Notes
 
-**State Management**:
+1. **State Management**:
    - Managing the state of content creators and ensuring that updates, additions, and deletions were reflected correctly across the app required careful planning and implementation.
    - Learning to effectively use hooks such as `useState` and `useEffect` to manage and synchronize state was crucial.
 
