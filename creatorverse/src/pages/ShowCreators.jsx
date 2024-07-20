@@ -62,6 +62,7 @@ const ShowCreators = () => {
               url={creator.url}
               description={creator.description}
               imageURL={creator.imageURL}
+              onClick={() => navigate(`/creator/${creator.id}`)}
             />
           ))}
         </div>

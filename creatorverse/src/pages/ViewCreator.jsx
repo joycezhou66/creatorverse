@@ -4,9 +4,9 @@ import { supabase } from '../client';
 
 const ViewCreator = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [creator, setCreator] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCreator = async () => {
@@ -32,18 +32,20 @@ const ViewCreator = () => {
   }
 
   if (!creator) {
-    return <p>Creator not found.</p>;
+    return <p>Creator not found</p>;
   }
 
   return (
     <div className="view-creator">
       <h1>{creator.name}</h1>
       {creator.imageURL && <img src={creator.imageURL} alt={`${creator.name}'s avatar`} />}
-      <p>{creator.description}</p>
-      <a href={creator.url} target="_blank" rel="noopener noreferrer">Visit Channel</a>
-      <button onClick={() => navigate(`/edit/${id}`)} className="btn btn-secondary">Edit</button>
+      <p><strong>Description:</strong> {creator.description}</p>
+      <a href={creator.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Visit Channel</a>
+      <button onClick={() => navigate('/')} className="btn btn-secondary">Back to Creators</button>
     </div>
   );
 };
 
 export default ViewCreator;
+
+

@@ -14,14 +14,18 @@ const Card = ({ id, name, url, description, imageURL }) => {
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">{description}</p>
-        <a href={url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Channel</a>
-        <button onClick={() => navigate(`/edit/${id}`)} className="btn btn-secondary">Edit</button>
+        <div className="button-group">
+          <button onClick={() => navigate(`/edit/${id}`)} className="btn btn-secondary">Edit</button>
+          <a href={url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Channel</a>
+          <button onClick={() => navigate(`/creator/${id}`)} className="btn btn-secondary">View Details</button>
+        </div>
       </div>
     </article>
   );
 };
 
 export default Card;
+
 
 
 
