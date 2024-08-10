@@ -1,6 +1,6 @@
 # Creatorverse
 
-About this web app: **👉🏿 Creatorverse is a React-based web application that allows users to manage a list of their favorite content creators. Users can create, read, update, and delete (CRUD) content creators. Each content creator entry includes their name, URL, description, and an optional image URL.**
+About this web app: **👉🏿 Creatorverse is a JavaScript and React based web application that allows users to manage a list of their favorite content creators. Users can create, read, update, and delete (CRUD) content creators. Each content creator entry includes their name, URL, description, and an optional image URL.**
 
 ## Required Features
 
