@@ -1,10 +1,6 @@
 # Creatorverse
 
-Submitted by: **👉🏿 Joyce Zhou**
-
 About this web app: **👉🏿 Creatorverse is a React-based web application that allows users to manage a list of their favorite content creators. Users can create, read, update, and delete (CRUD) content creators. Each content creator entry includes their name, URL, description, and an optional image URL.**
-
-Time spent: **👉🏿 24 hours
 
 ## Required Features
 
@@ -39,13 +35,6 @@ Here's a walkthrough of implemented required features:
 
 ![Video Walkthrough](https://github.com/joycezhou66/creatorverse/blob/main/GIFWalkthrough.gif)
 
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 LiceCap
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
